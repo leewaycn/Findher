@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D6D961E249212B30023F0A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D961D249212B30023F0A4 /* AppDelegate.m */; };
+		3D6D9621249212B30023F0A4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D9620249212B30023F0A4 /* SceneDelegate.m */; };
+		3D6D9624249212B30023F0A4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D9623249212B30023F0A4 /* HomeViewController.m */; };
+		3D6D9627249212B30023F0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D9625249212B30023F0A4 /* Main.storyboard */; };
+		3D6D9629249212C60023F0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D9628249212C60023F0A4 /* Assets.xcassets */; };
+		3D6D962C249212C70023F0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D6D962A249212C70023F0A4 /* LaunchScreen.storyboard */; };
+		3D6D962F249212C70023F0A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D962E249212C70023F0A4 /* main.m */; };
+		3D6D9638249214740023F0A4 /* RecordLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D9637249214740023F0A4 /* RecordLocationVC.m */; };
+		3D6D963D249218780023F0A4 /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D963C249218780023F0A4 /* LocationModel.m */; };
+		3D6D964024921EB60023F0A4 /* RecordListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D963F24921EB60023F0A4 /* RecordListTableViewCell.m */; };
+		3D6D9644249221610023F0A4 /* AnalysticsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D9643249221610023F0A4 /* AnalysticsVC.m */; };
+		3D6D9646249232AD0023F0A4 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D9645249232AD0023F0A4 /* GLKit.framework */; };
+		3D6D9648249232B30023F0A4 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D9647249232B30023F0A4 /* libc++.1.tbd */; };
+		3D6D964A249232B70023F0A4 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D9649249232B70023F0A4 /* libz.1.1.3.tbd */; };
+		3D6D964C249232BF0023F0A4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D964B249232BF0023F0A4 /* Security.framework */; };
+		3D6D964E249232C70023F0A4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D964D249232C70023F0A4 /* SystemConfiguration.framework */; };
+		3D6D9650249232CE0023F0A4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D964F249232CE0023F0A4 /* CoreTelephony.framework */; };
+		3D6D966C2493218B0023F0A4 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D966B2493218B0023F0A4 /* DBManager.m */; };
+		3D6D966E249330DC0023F0A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6D966D249330DC0023F0A4 /* CoreLocation.framework */; };
+		A4C4B211D22C788909E01C16 /* Pods_FindHer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6D9357AA899F34BEC6118E /* Pods_FindHer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D6D9619249212B30023F0A4 /* FindHer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindHer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D6D961C249212B30023F0A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D6D961D249212B30023F0A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D6D961F249212B30023F0A4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3D6D9620249212B30023F0A4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3D6D9622249212B30023F0A4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		3D6D9623249212B30023F0A4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		3D6D9626249212B30023F0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D6D9628249212C60023F0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D6D962B249212C70023F0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D6D962D249212C70023F0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D6D962E249212C70023F0A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D6D9636249214740023F0A4 /* RecordLocationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordLocationVC.h; sourceTree = "<group>"; };
+		3D6D9637249214740023F0A4 /* RecordLocationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordLocationVC.m; sourceTree = "<group>"; };
+		3D6D9639249214B00023F0A4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3D6D963B249218780023F0A4 /* LocationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
+		3D6D963C249218780023F0A4 /* LocationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
+		3D6D963E24921EB60023F0A4 /* RecordListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordListTableViewCell.h; sourceTree = "<group>"; };
+		3D6D963F24921EB60023F0A4 /* RecordListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordListTableViewCell.m; sourceTree = "<group>"; };
+		3D6D9642249221610023F0A4 /* AnalysticsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnalysticsVC.h; sourceTree = "<group>"; };
+		3D6D9643249221610023F0A4 /* AnalysticsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnalysticsVC.m; sourceTree = "<group>"; };
+		3D6D9645249232AD0023F0A4 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		3D6D9647249232B30023F0A4 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		3D6D9649249232B70023F0A4 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		3D6D964B249232BF0023F0A4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D6D964D249232C70023F0A4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D6D964F249232CE0023F0A4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3D6D966A2493218B0023F0A4 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		3D6D966B2493218B0023F0A4 /* DBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		3D6D966D249330DC0023F0A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB38C021529E615D52427F91 /* Pods-FindHer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHer.debug.xcconfig"; path = "Target Support Files/Pods-FindHer/Pods-FindHer.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6D9357AA899F34BEC6118E /* Pods_FindHer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindHer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35336538B6AFD752D0E157E /* Pods-FindHer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHer.release.xcconfig"; path = "Target Support Files/Pods-FindHer/Pods-FindHer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D6D9616249212B30023F0A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6D9650249232CE0023F0A4 /* CoreTelephony.framework in Frameworks */,
+				3D6D964E249232C70023F0A4 /* SystemConfiguration.framework in Frameworks */,
+				3D6D964C249232BF0023F0A4 /* Security.framework in Frameworks */,
+				3D6D964A249232B70023F0A4 /* libz.1.1.3.tbd in Frameworks */,
+				3D6D966E249330DC0023F0A4 /* CoreLocation.framework in Frameworks */,
+				3D6D9648249232B30023F0A4 /* libc++.1.tbd in Frameworks */,
+				3D6D9646249232AD0023F0A4 /* GLKit.framework in Frameworks */,
+				A4C4B211D22C788909E01C16 /* Pods_FindHer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D5B49360A14850FEDDDBB0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB38C021529E615D52427F91 /* Pods-FindHer.debug.xcconfig */,
+				D35336538B6AFD752D0E157E /* Pods-FindHer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3D6D9610249212B30023F0A4 = {
+			isa = PBXGroup;
+			children = (
+				3D6D961B249212B30023F0A4 /* FindHer */,
+				3D6D961A249212B30023F0A4 /* Products */,
+				3D5B49360A14850FEDDDBB0F /* Pods */,
+				60D351526CA6AAE741319968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3D6D961A249212B30023F0A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D9619249212B30023F0A4 /* FindHer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D6D961B249212B30023F0A4 /* FindHer */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D961C249212B30023F0A4 /* AppDelegate.h */,
+				3D6D961D249212B30023F0A4 /* AppDelegate.m */,
+				3D6D961F249212B30023F0A4 /* SceneDelegate.h */,
+				3D6D9620249212B30023F0A4 /* SceneDelegate.m */,
+				3D6D9651249235DF0023F0A4 /* main */,
+				3D6D9625249212B30023F0A4 /* Main.storyboard */,
+				3D6D9628249212C60023F0A4 /* Assets.xcassets */,
+				3D6D962A249212C70023F0A4 /* LaunchScreen.storyboard */,
+				3D6D962D249212C70023F0A4 /* Info.plist */,
+				3D6D9639249214B00023F0A4 /* PrefixHeader.pch */,
+				3D6D962E249212C70023F0A4 /* main.m */,
+			);
+			path = FindHer;
+			sourceTree = "<group>";
+		};
+		3D6D9635249214650023F0A4 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D96692493216D0023F0A4 /* DBManager */,
+				3D6D963A249218660023F0A4 /* Model */,
+				3D6D9636249214740023F0A4 /* RecordLocationVC.h */,
+				3D6D9637249214740023F0A4 /* RecordLocationVC.m */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		3D6D963A249218660023F0A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D963B249218780023F0A4 /* LocationModel.h */,
+				3D6D963C249218780023F0A4 /* LocationModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3D6D96412492214D0023F0A4 /* Analystics */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D9642249221610023F0A4 /* AnalysticsVC.h */,
+				3D6D9643249221610023F0A4 /* AnalysticsVC.m */,
+			);
+			path = Analystics;
+			sourceTree = "<group>";
+		};
+		3D6D9651249235DF0023F0A4 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D9667249316C90023F0A4 /* Home */,
+				3D6D96412492214D0023F0A4 /* Analystics */,
+				3D6D9635249214650023F0A4 /* Record */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		3D6D9667249316C90023F0A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D9668249316D30023F0A4 /* View */,
+				3D6D9622249212B30023F0A4 /* HomeViewController.h */,
+				3D6D9623249212B30023F0A4 /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3D6D9668249316D30023F0A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D963E24921EB60023F0A4 /* RecordListTableViewCell.h */,
+				3D6D963F24921EB60023F0A4 /* RecordListTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D6D96692493216D0023F0A4 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D966A2493218B0023F0A4 /* DBManager.h */,
+				3D6D966B2493218B0023F0A4 /* DBManager.m */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		60D351526CA6AAE741319968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D6D966D249330DC0023F0A4 /* CoreLocation.framework */,
+				3D6D964F249232CE0023F0A4 /* CoreTelephony.framework */,
+				3D6D964D249232C70023F0A4 /* SystemConfiguration.framework */,
+				3D6D964B249232BF0023F0A4 /* Security.framework */,
+				3D6D9649249232B70023F0A4 /* libz.1.1.3.tbd */,
+				3D6D9647249232B30023F0A4 /* libc++.1.tbd */,
+				3D6D9645249232AD0023F0A4 /* GLKit.framework */,
+				BA6D9357AA899F34BEC6118E /* Pods_FindHer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D6D9618249212B30023F0A4 /* FindHer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D6D9632249212C70023F0A4 /* Build configuration list for PBXNativeTarget "FindHer" */;
+			buildPhases = (
+				EB476EE31F5B600519F1A1E2 /* [CP] Check Pods Manifest.lock */,
+				3D6D9615249212B30023F0A4 /* Sources */,
+				3D6D9616249212B30023F0A4 /* Frameworks */,
+				3D6D9617249212B30023F0A4 /* Resources */,
+				193003EF4904E8CAF3248C2B /* [CP] Copy Pods Resources */,
+				5D0C43779A4729A7224FC9F1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindHer;
+			productName = FindHer;
+			productReference = 3D6D9619249212B30023F0A4 /* FindHer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D6D9611249212B30023F0A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = tqlLW;
+				TargetAttributes = {
+					3D6D9618249212B30023F0A4 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 3D6D9614249212B30023F0A4 /* Build configuration list for PBXProject "FindHer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D6D9610249212B30023F0A4;
+			productRefGroup = 3D6D961A249212B30023F0A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D6D9618249212B30023F0A4 /* FindHer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D6D9617249212B30023F0A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6D962C249212C70023F0A4 /* LaunchScreen.storyboard in Resources */,
+				3D6D9629249212C60023F0A4 /* Assets.xcassets in Resources */,
+				3D6D9627249212B30023F0A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		193003EF4904E8CAF3248C2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindHer/Pods-FindHer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindHer/Pods-FindHer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindHer/Pods-FindHer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D0C43779A4729A7224FC9F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindHer/Pods-FindHer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindHer/Pods-FindHer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindHer/Pods-FindHer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB476EE31F5B600519F1A1E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindHer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D6D9615249212B30023F0A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D6D9624249212B30023F0A4 /* HomeViewController.m in Sources */,
+				3D6D961E249212B30023F0A4 /* AppDelegate.m in Sources */,
+				3D6D964024921EB60023F0A4 /* RecordListTableViewCell.m in Sources */,
+				3D6D966C2493218B0023F0A4 /* DBManager.m in Sources */,
+				3D6D963D249218780023F0A4 /* LocationModel.m in Sources */,
+				3D6D9638249214740023F0A4 /* RecordLocationVC.m in Sources */,
+				3D6D9644249221610023F0A4 /* AnalysticsVC.m in Sources */,
+				3D6D962F249212C70023F0A4 /* main.m in Sources */,
+				3D6D9621249212B30023F0A4 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D6D9625249212B30023F0A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D6D9626249212B30023F0A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D6D962A249212C70023F0A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D6D962B249212C70023F0A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D6D9630249212C70023F0A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D6D9631249212C70023F0A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D6D9633249212C70023F0A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB38C021529E615D52427F91 /* Pods-FindHer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8L52AAT833;
+				GCC_PREFIX_HEADER = "${SRCROOT}/FindHer/PrefixHeader.pch";
+				INFOPLIST_FILE = FindHer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tqlTech.FindHer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D6D9634249212C70023F0A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35336538B6AFD752D0E157E /* Pods-FindHer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 8L52AAT833;
+				GCC_PREFIX_HEADER = "${SRCROOT}/FindHer/PrefixHeader.pch";
+				INFOPLIST_FILE = FindHer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tqlTech.FindHer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D6D9614249212B30023F0A4 /* Build configuration list for PBXProject "FindHer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6D9630249212C70023F0A4 /* Debug */,
+				3D6D9631249212C70023F0A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D6D9632249212C70023F0A4 /* Build configuration list for PBXNativeTarget "FindHer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D6D9633249212C70023F0A4 /* Debug */,
+				3D6D9634249212C70023F0A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D6D9611249212B30023F0A4 /* Project object */;
+}

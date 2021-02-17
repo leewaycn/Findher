@@ -1,0 +1,202 @@
+//
+//  PrefixHeader.pch
+//  FindHer
+//
+//  Created by tql on 2020/6/11.
+//  Copyright © 2020 tqlLW. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <Realm/Realm.h>
+
+#import <Masonry/Masonry.h>
+
+
+
+#if DEBUG
+#define NSLog(...)  NSLog(@"%@",[NSString stringWithFormat:__VA_ARGS__]);
+
+#define DebugMethod() NSLog(@"%s",__func__);
+
+#define logMessage(...) \
+NSLog((@"日志打印: %@  %s [%d] [%@]\n "), [[NSString stringWithFormat:@"%s", __FILE__]lastPathComponent], __FUNCTION__, __LINE__, [NSString stringWithFormat:__VA_ARGS__]);
+
+
+#else
+
+#define NSLog(...)
+#define DebugMethod()
+#define logMessage(...)
+
+#endif
+
+
+//#pragma mark - Size
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define SCREEN_SHORTSIDE   ((SCREEN_WIDTH<SCREEN_HEIGHT) ?SCREEN_WIDTH  : SCREEN_HEIGHT)//长边
+#define SCREEN_LONGSIDE    ((SCREEN_WIDTH<SCREEN_HEIGHT) ?  SCREEN_HEIGHT : SCREEN_WIDTH) //短边
+
+
+
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+
+#define IS_Pad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+
+#define AUTOSCALE_HEIGHT(H) ((SCREEN_HEIGHT/( 667))*H)
+
+#define AUTOSCALE_WIDTH(W) ((SCREEN_WIDTH/( 375.0))*W)
+
+#define AUTOSCALE_WIDTH_Short(W) ((SCREEN_SHORTSIDE/( 375.0))*W)
+#define AUTOSCALE_WIDTH_Long(W) ((SCREEN_LONGSIDE/( 667))*W)
+
+
+
+#define STATUSBAR_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height)
+
+#define NAVIGATION_HEIGHT (STATUSBAR_HEIGHT + 44)
+
+#define IS_IPHONEX \
+({\
+BOOL isIPhoneX = NO;\
+if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {\
+isIPhoneX = NO;\
+}\
+if (@available(iOS 11.0, *)) {\
+UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];\
+if (mainWindow.safeAreaInsets.bottom > 0.0) {\
+isIPhoneX = YES;\
+}\
+}\
+(isIPhoneX);\
+})
+
+
+
+//弱引用
+#define WeakSelf(weakSelf)   __weak __typeof(&*self)    weakSelf  = self;
+
+
+#define TOP_MARGIN (IS_IPHONEX ? 88.0 : 64.0)
+
+#define TABBAR_HEIGHT (IS_IPHONEX ? (49.0+34.0) : 49.0)
+
+#define kSafeAreaHeight (IS_IPHONEX?34:0)
+
+
+
+#define kStatusBarFrame     [[UIApplication sharedApplication] statusBarFrame]
+//状态栏高度
+#define kStatusBarHeight  [[UIApplication sharedApplication] statusBarFrame].size.height
+//导航栏高度
+#define kNavigationBarHeight 44
+//顶部高度
+#define kTopHeight (kStatusBarHeight+kNavigationBarHeight)
+//iPhoneX安全区域高度
+//#define kSafeAreaHeight (kStatusBarHeight>20?34:0)
+//底部高度
+#define kBottomHeight (49+kSafeAreaHeight)
+
+
+ 
+#define ACTUAL_RECT (CGRect){0, TOP_MARGIN, SCREEN_WIDTH, SCREEN_HEIGHT - TOP_MARGIN}
+
+#define CORNRRRADIUS 5.0
+
+#define IMAGENAME(name) [UIImage imageNamed:name]
+#define UrlImage(name) [NSURL URLWithString:name]
+
+//NSUserDefaults
+#define USER_DEFAULTS_SET(object, key) ({\
+NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];\
+[userDefault setObject:object forKey:key];\
+[userDefault synchronize];})
+
+#define USER_DEFAULTS_GET_OBJECT(key) [[NSUserDefaults standardUserDefaults] objectForKey:key]
+
+#define USER_DEFAULTS_GET_STRING(key) [[NSUserDefaults standardUserDefaults] stringForKey:key]
+
+#define USER_DEFAULTS_GET_ARRAY(key) [ [NSUserDefaults standardUserDefaults] arrayForKey:key]
+
+//#pragma mark - UIColor
+
+
+#define RGBA_COLOR(R, G, B, A) [UIColor colorWithRed:((R) / 255.0f) \
+green:((G) / 255.0f) \
+blue:((B) / 255.0f) \
+alpha:A]
+
+#define RGB_COLOR(R,G,B) [UIColor colorWithRed:((R) / 255.0f) \
+green: ((G) / 255.0f) \
+blue:((B) / 255.0f) \
+alpha: 1.0f]
+
+#define COLOR_WITH_HEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16)) / 255.0 green:((float)((hexValue & 0xFF00) >> 8)) / 255.0 blue:((float)(hexValue & 0xFF)) / 255.0 alpha:1.0f]
+
+#define HEX_FROM_COLOR(color) ({ \
+if (CGColorGetNumberOfComponents(color.CGColor) < 4) { \
+const CGFloat *components = CGColorGetComponents(color.CGColor); \
+color = [UIColor colorWithRed:components[0] green:components[0] blue:components[0] alpha:components[1]]; \
+} \
+NSString *hex = (CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) != kCGColorSpaceModelRGB) ? [NSString stringWithFormat:@"#FFFFFF"] : [NSString stringWithFormat:@"#%02X%02X%02X", (int)((CGColorGetComponents(color.CGColor))[0]*255.0), (int)((CGColorGetComponents(color.CGColor))[1]*255.0), (int)((CGColorGetComponents(color.CGColor))[2]*255.0)]; \
+(hex); \
+})
+
+#define CKGColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define CKGAColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f \
+alpha:(a)]
+
+#define RandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+#define RandColor RGB_COLOR(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+
+#define DEFAULT_GRAYCOLOR RGB_COLOR(238, 238, 238)
+
+#define GETFONT(x) [UIFont fontWithName:@"Helvetica" size:x]
+#define GETCustomFont(fontName,fontSize) [UIFont fontWithName:fontName size:fontSize]
+
+#define kAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+
+//带格式化的时间
+#define GETCURRENTTIME ({ \
+NSDate *date = [NSDate date]; \
+NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; \
+[formatter setDateStyle:NSDateFormatterMediumStyle]; \
+[formatter setTimeStyle:NSDateFormatterShortStyle]; \
+[formatter setDateFormat:@"yyyy-MM-dd_HH-mm-ss"]; \
+NSString *timeStamp = [formatter stringFromDate:date]; \
+(timeStamp); \
+})
+
+
+//毫秒级时间戳
+#define GETCURRENTTIMESTAMP ({\
+NSDate *date = [NSDate date];\
+NSString *timestamp = [NSString stringWithFormat:@"%.f",date.timeIntervalSince1970*1000];\
+(timestamp);\
+})
+
+
+#define kDefaultPlaceHolderImage     IMAGENAME(@"icon_default_img")
+#define kDefaultAvatoreImage         IMAGENAME(@"icon_default_avator")//icon_default_avator
+
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */
